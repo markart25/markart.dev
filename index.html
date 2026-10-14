@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mark · markart.dev</title>
+  <meta name="description" content="Mark's projects: Linux, software and electronics.">
+  <style>
+    /* ---------- Colour tokens: change these and the whole site restyles ---------- */
+    :root {
+      color-scheme: dark;
+
+      --bg: #0b0d12;                      /* shows while the image loads */
+      --surface: rgba(14, 17, 24, 0.55);  /* translucent panels over the photo */
+      --text: #eceef4;
+      --muted: #a4abbb;
+      --border: rgba(255, 255, 255, 0.14);
+      --accent: #9db0ff;
+
+      --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --font-mono: ui-monospace, "JetBrains Mono", "Fira Code", Consolas, monospace;
+
+      --space: 1rem;
+      --radius: 8px;
+      --max-width: 44rem;
+    }
+
+    /* ---------- Base ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-color: var(--bg);
+      /* dark gradient on top keeps text readable; image underneath */
+      background-image:
+        linear-gradient(to bottom, rgba(8, 10, 15, 0.55), rgba(8, 10, 15, 0.8)),
+        url("mountains.jpg");
+      background-size: cover;
+      background-position: center bottom;
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 calc(var(--space) * 1.25);
+    }
+
+    h1, h2, h3 { line-height: 1.2; font-family: var(--font-mono); font-weight: 600; }
+    h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); margin: 0 0 var(--space); }
+    h2 { font-size: 1.3rem; margin: 3rem 0 var(--space); }
+    h3 { font-size: 1.05rem; margin: 0 0 0.25rem; }
+    p  { margin: 0 0 var(--space); }
+
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+    /* ---------- Layout pieces ---------- */
+    .site-header { padding: calc(var(--space) * 1.5) 0; border-bottom: 1px solid var(--border); }
+    .site-header .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space); }
+    .logo { font-family: var(--font-mono); font-weight: 700; color: var(--text); text-decoration: none; }
+
+    nav ul { display: flex; gap: calc(var(--space) * 1.25); list-style: none; margin: 0; padding: 0; }
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--text); }
+
+    .hero { padding: 4rem 0 1rem; }
+    .hero p { color: var(--muted); font-size: 1.1rem; max-width: 36rem; }
+
+    /* ---------- Project grid ---------- */
+    .projects {
+      display: grid;
+      gap: var(--space);
+      grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .card {
+      display: block;
+      height: 100%;
+      padding: var(--space) calc(var(--space) * 1.25);
+      background: var(--surface);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      text-decoration: none;
+      transition: border-color 0.15s;
+    }
+    .card:hover, .card:focus-visible { border-color: var(--accent); }
+    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    .tags { margin-top: 0.75rem !important; font-family: var(--font-mono); font-size: 0.8rem !important; }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      margin-top: 5rem;
+      padding: calc(var(--space) * 1.5) 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/">markart.dev</a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="hero">
+      <h1>Hi, I'm Mark.</h1>
+      <p>I build things with Linux, code and electronics. Here are some of them.</p>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <ul class="projects">
+
+        <!-- Copy this <li> block for each project -->
+        <li>
+          <a class="card" href="mste.html">
+            <h3>mste</h3>
+            <p>A small nano-style terminal text editor in Python, themed by your terminal colours.</p>
+            <p class="tags">Python · curses · AUR</p>
+          </a>
+        </li>
+
+        <li>
+          <a class="card" href="markdots.html">
+            <h3>markdots</h3>
+            <p>My Hyprland dotfiles for Arch Linux, themed from the wallpaper with pywal.</p>
+            <p class="tags">Hyprland · Arch · pywal16</p>
+          </a>
+        </li>
+
+        <li>
+          <a class="card" href="dice-bot.html">
+            <h3>dice-bot</h3>
+            <p>A Discord dice-rolling bot, self-hosted in Docker on my home server.</p>
+            <p class="tags">Python · Discord · Docker</p>
+          </a>
+        </li>
+
+      </ul>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>
+        <a href="https://github.com/markart25">GitHub</a>
+        <!-- add YouTube / TikTok / email links here -->
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">© 2026 Mark</div>
+  </footer>
+
+</body>
+</html>

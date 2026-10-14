@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>dice-bot · markart.dev</title>
+  <meta name="description" content="dice-bot is a small Discord bot that rolls dice, written in Python and self-hosted in Docker.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">markart.dev</a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <a class="back" href="index.html#projects">← All projects</a>
+
+    <article>
+      <h1>dice-bot</h1>
+      <p class="meta">Python · Discord · Docker · MIT</p>
+
+      <p>
+        dice-bot is a Discord bot that rolls dice. I built it in about two hours as a quick project,
+        and it now runs around the clock on my home server.
+      </p>
+
+      <h2>How it works</h2>
+      <p>
+        It's a single Python script (<code>main.py</code>) that connects to Discord with a bot token
+        and responds to dice commands in chat. The token lives in a <code>.env</code> file, kept out of
+        the code, and the dependencies are listed in <code>requirements.txt</code>.
+      </p>
+
+      <h2>Where it runs</h2>
+      <p>
+        The bot is hosted on my home lab, an old laptop running Debian. It runs as a Docker container
+        managed with Portainer, so it restarts by itself if anything goes wrong.
+      </p>
+
+      <h2>Run your own</h2>
+<pre><code>git clone https://github.com/markart25/dice-bot
+cd dice-bot
+pip install -r requirements.txt
+
+# put your Discord bot token in .env, then:
+python main.py</code></pre>
+      <p>The code is open, so feel free to reuse it as a starting point for your own bot.</p>
+
+      <p><a href="https://github.com/markart25/dice-bot">View on GitHub →</a></p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">© 2026 Mark</div>
+  </footer>
+
+</body>
+</html>

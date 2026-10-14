@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mste · markart.dev</title>
+  <meta name="description" content="mste is a small nano-style terminal text editor written in Python with curses.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">markart.dev</a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <a class="back" href="index.html#projects">← All projects</a>
+
+    <article>
+      <h1>mste</h1>
+      <p class="meta">Python · curses · Terminal · MIT</p>
+
+      <p>
+        mste (Mark's simple text editor) is a small terminal text editor with nano-style keybindings.
+        It's written in Python using only the standard library <code>curses</code> module, so there is
+        nothing to install beyond Python itself.
+      </p>
+
+      <h2>Why I made it</h2>
+      <p>
+        I wanted an editor that felt like nano but matched the rest of my setup. Most of my terminal
+        tools take their colours from my wallpaper, and mste is built to do the same.
+      </p>
+
+      <h2>Features</h2>
+      <ul>
+        <li>Nano-style keys, like Ctrl-S to save and Ctrl-X to quit</li>
+        <li>Save and Save As, with a warning if you quit with unsaved changes</li>
+        <li>Cut and paste a line, plus incremental search</li>
+        <li>Title bar, status line and help bar</li>
+        <li>Zero dependencies, runs on Linux and macOS terminals that support curses</li>
+      </ul>
+
+      <h2>Theming</h2>
+      <p>
+        mste doesn't hard-code colours. Its config stores indices into the terminal's 16-colour ANSI
+        palette, so whenever the palette changes (with pywal, for example) the editor retints itself.
+        On first launch it creates a config file at <code>~/.config/mste/config.conf</code> that you can edit.
+      </p>
+
+      <h2>Try it</h2>
+<pre><code>git clone https://github.com/markart25/mste
+cd mste
+pip install --user .
+
+mste notes.txt</code></pre>
+      <p>On Arch it's also in the AUR: <code>yay -S mste</code>.</p>
+
+      <p><a href="https://github.com/markart25/mste">View on GitHub →</a></p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">© 2026 Mark</div>
+  </footer>
+
+</body>
+</html>

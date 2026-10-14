@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>markdots · markart.dev</title>
+  <meta name="description" content="markdots is my Hyprland dotfiles collection for Arch Linux, themed from the wallpaper with pywal.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">markart.dev</a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <a class="back" href="index.html#projects">← All projects</a>
+
+    <article>
+      <h1>markdots</h1>
+      <p class="meta">Hyprland · Arch Linux · pywal16 · MIT</p>
+
+      <p>
+        markdots is my dotfiles repo: the configs for the Hyprland desktop I use every day on Arch Linux.
+        The whole setup takes its colours from the current wallpaper, so changing the background
+        restyles the bar, launcher and terminal together.
+      </p>
+
+      <h2>What's in it</h2>
+      <ul>
+        <li><strong>Hyprland</strong>, a tiling Wayland compositor, with hyprlock and hypridle for locking and idle</li>
+        <li><strong>Kitty</strong> terminal and <strong>Zsh</strong>, using JetBrains Mono</li>
+        <li><strong>Waybar</strong> status bar, <strong>Wofi</strong> launcher and <strong>Mako</strong> notifications</li>
+        <li><strong>cliphist</strong> for clipboard history and <strong>awww</strong> for wallpapers</li>
+        <li>Extras: fastfetch, btop, cmatrix and asciiquarium</li>
+      </ul>
+
+      <h2>Theming</h2>
+      <p>
+        pywal16 generates a colour scheme from the wallpaper, and Waybar and Wofi import the
+        generated colours. Drop in a new wallpaper, run <code>wal</code>, and everything follows.
+      </p>
+
+      <h2>Keybinds</h2>
+      <p>
+        <kbd>SUPER</kbd> is the main modifier. A few examples: <kbd>SUPER</kbd>+<kbd>Q</kbd> opens the
+        terminal, <kbd>SUPER</kbd>+<kbd>A</kbd> opens the launcher, <kbd>SUPER</kbd>+<kbd>L</kbd> locks the
+        screen, and <kbd>SUPER</kbd>+<kbd>SHIFT</kbd>+<kbd>S</kbd> takes a region screenshot.
+      </p>
+
+      <h2>Try it</h2>
+<pre><code>git clone https://github.com/markart25/markdots
+cd markdots
+cp -r .config/* ~/.config/
+wal -i ~/.config/wallpapers</code></pre>
+      <p>
+        These configs are personal, so expect to tweak a few things: set your monitor scale in
+        <code>monitors.conf</code> and change the hard-coded home path in the Waybar and Wofi CSS imports.
+        Back up your existing dotfiles first.
+      </p>
+
+      <h2>Credits</h2>
+      <p>Based on configs by mkhmtolzhas.</p>
+
+      <p><a href="https://github.com/markart25/markdots">View on GitHub →</a></p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">© 2026 Mark</div>
+  </footer>
+
+</body>
+</html>
