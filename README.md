@@ -14,7 +14,7 @@ My personal portfolio site: a few static pages about the things I build with Lin
 ├── dice-bot.html
 ├── project-template.html  # blank page to copy for a new project
 ├── style.css              # all styling; colours are variables at the top
-├── mountains.jpg          # background image
+├── wallpaper.jpg          # background image
 ├── favicon.ico            # favicon (browser tab icon)
 ├── favicon-32.png
 └── apple-touch-icon.png   # icon for phone home screens
