@@ -1,6 +1,6 @@
 # markart.dev
 
-btw this is not live yet but will be soon, currently markart.dev is the same page as the markart25.github.io
+> **Not live yet, but will be soon.** For now, markart.dev shows the same page as markart25.github.io.
 
 My personal portfolio site: a few static pages about the things I build with Linux, code and electronics. It's plain HTML and CSS with no build step and no dependencies.
 
@@ -14,8 +14,10 @@ My personal portfolio site: a few static pages about the things I build with Lin
 ├── dice-bot.html
 ├── project-template.html  # blank page to copy for a new project
 ├── style.css              # all styling; colours are variables at the top
-└── mountains.jpg          # background image
+├── mountains.jpg          # background image
+├── favicon.ico            # favicon (browser tab icon)
+├── favicon-32.png
+└── apple-touch-icon.png   # icon for phone home screens
 ```
 
 To add a project, copy `project-template.html`, fill it in, and add a card for it in `index.html`.
-
